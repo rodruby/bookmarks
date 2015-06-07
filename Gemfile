@@ -1,15 +1,10 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-group :development, :test do 
-gem 'sqlite3'
-end
-group :production do 
-gem 'pg'
-end
+gem 'sqlite3', group: :development
+gem 'pg', '0.18.1', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -45,3 +40,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'coffee-script-source', '1.8.0'
+gem 'rails_12factor', group: :production
